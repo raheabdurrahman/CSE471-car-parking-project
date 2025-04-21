@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 96%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 210 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 90%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 75% 75%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-parkgray-light text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-medium;
+  }
+}
+
+@layer components {
+  .park-card {
+    @apply bg-white rounded-lg shadow-sm p-4 border border-gray-200;
+  }
+  
+  .park-btn-primary {
+    @apply bg-parkblue hover:bg-parkblue-dark text-white font-medium py-2 px-4 rounded-md transition-colors;
+  }
+  
+  .park-btn-secondary {
+    @apply bg-white hover:bg-parkgray-light text-parkblue border border-parkblue font-medium py-2 px-4 rounded-md transition-colors;
+  }
+  
+  .park-input {
+    @apply w-full px-3 py-2 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-parkblue;
+  }
+}
+
+@import "leaflet/dist/leaflet.css";
